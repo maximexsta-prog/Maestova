@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acolyte par Maestova — L'assistant IA qui prépare vos réponses, apprend de vos validations et vous laisse le contrôle</title>
+  <meta name="description" content="Acolyte, par Maestova : un assistant IA qui rédige des réponses, retrouve le contexte client et apprend de vos validations. Vous restez aux commandes : vous approuvez, adaptez et envoyez." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+
+  <!-- ===================== NAV ===================== -->
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="#">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 36 36" width="30" height="30">
+            <defs>
+              <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#7c5cff"/>
+                <stop offset="1" stop-color="#5b3ff5"/>
+              </linearGradient>
+            </defs>
+            <rect x="1" y="1" width="34" height="34" rx="10" fill="url(#logoGrad)"/>
+            <text x="18" y="25" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="21" font-weight="800" fill="#fff">M</text>
+          </svg>
+        </span>
+        <span class="brand__name">Maestova</span>
+      </a>
+
+      <nav class="nav__links" aria-label="Principal">
+        <a href="#produit">Produit</a>
+        <a href="#solutions">Solutions <span class="caret">▾</span></a>
+        <a href="#integrations">Intégrations</a>
+        <a href="#tarifs">Tarifs</a>
+        <a href="#entreprise">Entreprise <span class="caret">▾</span></a>
+      </nav>
+
+      <div class="nav__actions">
+        <a class="link-muted" href="#connexion">Connexion</a>
+        <a class="btn btn--primary" href="#demo">Réserver une démo</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <span class="pill">
+          <span class="pill__spark" aria-hidden="true">✦</span>
+          Nouveau : Acolyte, votre nouvel employé IA
+        </span>
+
+        <h1 class="hero__title">
+          L'assistant IA qui prépare vos réponses,
+          apprend de vos validations
+          et vous laisse le contrôle.
+        </h1>
+
+        <p class="hero__lead">
+          Acolyte rédige des réponses, retrouve le contexte client
+          et apprend de vos validations. Vous restez aux commandes :
+          vous approuvez, adaptez et envoyez.
+        </p>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary btn--lg" href="#demo">
+            Réserver une démo <span class="btn__arrow">→</span>
+          </a>
+          <a class="btn btn--ghost btn--lg" href="#video">
+            Voir comment ça fonctionne <span class="btn__play" aria-hidden="true">▶</span>
+          </a>
+        </div>
+
+        <ul class="hero__assurances">
+          <li>
+            <span class="assurance__icon">🛡</span>
+            <span>Aucune réponse envoyée<br/>sans votre approbation</span>
+          </li>
+          <li>
+            <span class="assurance__icon">📖</span>
+            <span>Apprend de vos erreurs<br/>et de vos réussites</span>
+          </li>
+          <li>
+            <span class="assurance__icon">🔒</span>
+            <span>Sécurisé et conforme<br/>aux normes du Québec</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="hero__visual" aria-hidden="true">
+        <div class="cube-stage">
+          <svg class="cube-svg" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <radialGradient id="blob" cx="45%" cy="40%" r="65%">
+                <stop offset="0%"  stop-color="#ffffff"/>
+                <stop offset="22%" stop-color="#c4b5fd"/>
+                <stop offset="50%" stop-color="#8b5cf6"/>
+                <stop offset="78%" stop-color="#6366f1"/>
+                <stop offset="100%" stop-color="#ec4899"/>
+              </radialGradient>
+              <linearGradient id="faceTop" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffffff" stop-opacity=".85"/>
+                <stop offset="1" stop-color="#e9e6ff" stop-opacity=".35"/>
+              </linearGradient>
+              <linearGradient id="faceLeft" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#dcd7ff" stop-opacity=".30"/>
+                <stop offset="1" stop-color="#b9b0f5" stop-opacity=".18"/>
+              </linearGradient>
+              <linearGradient id="faceRight" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffffff" stop-opacity=".42"/>
+                <stop offset="1" stop-color="#cfc8fb" stop-opacity=".20"/>
+              </linearGradient>
+              <filter id="goo" x="-40%" y="-40%" width="180%" height="180%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" seed="7" result="noise"/>
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="34"/>
+                <feGaussianBlur stdDeviation="1.2"/>
+              </filter>
+              <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="6"/>
+              </filter>
+            </defs>
+
+            <!-- ground glow -->
+            <ellipse cx="262" cy="438" rx="150" ry="26" fill="#b9aaf5" opacity=".35" filter="url(#soft)"/>
+
+            <!-- inner organic blob -->
+            <g filter="url(#goo)">
+              <circle cx="250" cy="232" r="92" fill="url(#blob)"/>
+              <circle cx="300" cy="270" r="58" fill="url(#blob)" opacity=".9"/>
+              <circle cx="210" cy="282" r="50" fill="url(#blob)" opacity=".85"/>
+              <circle cx="288" cy="188" r="44" fill="url(#blob)" opacity=".8"/>
+            </g>
+            <circle cx="232" cy="208" r="9" fill="#ffffff" opacity=".9"/>
+
+            <!-- glass cube (isometric) -->
+            <g class="cube" stroke="#ffffff" stroke-opacity=".9" stroke-width="1.4" stroke-linejoin="round">
+              <!-- back faces hint -->
+              <polygon points="262,70 432,168 432,360 262,458 92,360 92,168" fill="#ffffff" fill-opacity=".05"/>
+              <!-- top -->
+              <polygon points="262,70 432,168 262,266 92,168" fill="url(#faceTop)"/>
+              <!-- left -->
+              <polygon points="92,168 262,266 262,458 92,360" fill="url(#faceLeft)"/>
+              <!-- right -->
+              <polygon points="432,168 262,266 262,458 432,360" fill="url(#faceRight)"/>
+            </g>
+
+            <!-- floating particles -->
+            <circle cx="120" cy="120" r="3" fill="#a78bfa"/>
+            <circle cx="430" cy="110" r="2.5" fill="#f0abfc"/>
+            <circle cx="470" cy="300" r="3" fill="#818cf8"/>
+            <circle cx="80"  cy="320" r="2.5" fill="#c4b5fd"/>
+            <circle cx="360" cy="440" r="2.5" fill="#a78bfa"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TRUST ===================== -->
+  <section class="trust">
+    <div class="container">
+      <p class="trust__label">Ils nous font confiance</p>
+      <ul class="trust__logos">
+        <li>CAFÉ NOIR<br/><small>RÔTISSERIE</small></li>
+        <li>ATELIER<br/>BORÉAL</li>
+        <li>CLINIQUE OAK<br/><small>PHYSIOTHÉRAPIE</small></li>
+        <li>CRÈMERIES<br/>D'ICI</li>
+        <li>BOUTIQUE<br/>NOMADE</li>
+        <li>MENUISERIE<br/>LAVOIE</li>
+        <li>VÉLO<br/>QUÉBEC</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== DASHBOARD ===================== -->
+  <section class="dash" id="produit">
+    <div class="container dash__grid">
+      <div class="dash__copy">
+        <span class="eyebrow">Conçu pour vos équipes</span>
+        <h2 class="dash__title">
+          Un tableau de bord clair.<br/>
+          Des réponses de qualité.<br/>
+          Toujours sous votre contrôle.
+        </h2>
+        <p class="dash__lead">
+          Acolyte analyse chaque message, retrouve le contexte pertinent
+          et propose une réponse prête à être approuvée, modifiée ou enrichie.
+        </p>
+        <ul class="checklist">
+          <li>Messages entrants centralisés</li>
+          <li>Contexte client instantané</li>
+          <li>Réponse proposée par IA</li>
+          <li>Modifiable, approuvable et envoyable</li>
+          <li>Apprentissage à chaque validation</li>
+        </ul>
+      </div>
+
+      <!-- product UI mockup -->
+      <div class="appshot">
+        <div class="appshot__col appshot__sidebar">
+          <div class="appshot__brand">
+            <svg viewBox="0 0 36 36" width="20" height="20"><rect x="1" y="1" width="34" height="34" rx="10" fill="#5b3ff5"/><text x="18" y="25" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="21" font-weight="800" fill="#fff">A</text></svg>
+            <span>Acolyte</span>
+          </div>
+          <nav class="appnav">
+            <a class="is-active">▦ Tableau de bord</a>
+            <a>✉ Messages</a>
+            <a>👤 Contexte clients</a>
+            <a>✦ Apprentissage</a>
+            <a>📊 Statistiques</a>
+            <a>⚙ Paramètres</a>
+          </nav>
+          <div class="appuser">
+            <span class="avatar">SL</span>
+            <div>
+              <strong>Sophie Lavoie</strong>
+              <small>Équipe support</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="appshot__col appshot__inbox">
+          <div class="col__head">
+            <span>Messages entrants</span>
+            <span class="badge">12 non traités</span>
+          </div>
+          <button class="chip chip--filter">⤵ Filtrer</button>
+          <ul class="msglist">
+            <li class="is-active">
+              <span class="dot"></span>
+              <div><strong>Marc-André Roy</strong><small>Compatibilité de votre équipement</small></div>
+              <time>11:24</time>
+            </li>
+            <li>
+              <div><strong>Julien Tremblay</strong><small>Délai de livraison</small></div>
+              <time>10:47</time>
+            </li>
+            <li>
+              <div><strong>Émilie Gagnon</strong><small>Facture #INV-2024-879</small></div>
+              <time>09:15</time>
+            </li>
+            <li>
+              <div><strong>David Bouchard</strong><small>Modification de commande</small></div>
+              <time>Hier</time>
+            </li>
+            <li>
+              <div><strong>Marie-Eve Paquette</strong><small>Retour produit</small></div>
+              <time>Hier</time>
+            </li>
+          </ul>
+          <button class="btn btn--soft btn--block">Voir tous les messages</button>
+        </div>
+
+        <div class="appshot__col appshot__reply">
+          <div class="col__head"><span>Réponse proposée par Acolyte</span></div>
+          <span class="chip chip--tone">Ton : professionnel &amp; chaleureux ✶</span>
+          <div class="reply__body">
+            <p>Bonjour Marc-André,</p>
+            <p>Oui, notre produit est entièrement compatible avec votre équipement.
+               Voici la documentation technique en pièce jointe.
+               N'hésitez pas si vous avez d'autres questions.</p>
+            <p>Bonne journée !<br/>L'équipe Maestova</p>
+          </div>
+          <div class="attach">📎 <div><strong>Fiche_technique_Acolyte.pdf</strong><small>PDF · 1.2 Mo</small></div></div>
+          <div class="reply__actions">
+            <button class="btn btn--soft">Modifier la réponse</button>
+            <button class="btn btn--primary">Approuver et envoyer ➤</button>
+          </div>
+        </div>
+
+        <div class="appshot__col appshot__context">
+          <div class="col__head"><span>Contexte client</span></div>
+          <div class="ctx"><span>🗓</span><div><small>Client depuis</small><strong>Février 2023</strong></div></div>
+          <div class="ctx"><span>💬</span><div><small>Dernière interaction</small><strong>Il y a 2 jours</strong></div></div>
+          <div class="ctx"><span>🛍</span><div><small>Achats récents</small><strong>Plan Pro · 2 mai 2024</strong></div></div>
+          <div class="ctx"><span>✉</span><div><small>Préférence</small><strong>Communications par courriel</strong></div></div>
+          <button class="btn btn--soft btn--block">Voir le profil complet</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FEATURE CARDS ===================== -->
+  <section class="features" id="solutions">
+    <div class="container features__grid">
+      <article class="feature">
+        <span class="feature__icon">⚡</span>
+        <h3>Réponses plus rapides</h3>
+        <p>L'IA rédige des réponses pertinentes en quelques secondes, pour un service plus réactif et efficace.</p>
+      </article>
+      <article class="feature">
+        <span class="feature__icon">📖</span>
+        <h3>Mémoire d'entreprise</h3>
+        <p>Toutes vos interactions approuvées enrichissent la base de connaissances et assurent la cohérence.</p>
+      </article>
+      <article class="feature">
+        <span class="feature__icon">🧠</span>
+        <h3>Apprentissage continu</h3>
+        <p>Acolyte apprend de vos validations pour s'améliorer en continu et s'adapter à votre ton.</p>
+      </article>
+      <article class="feature">
+        <span class="feature__icon">🛡</span>
+        <h3>Contrôle total</h3>
+        <p>Vous révisez, adaptez et approuvez toujours. Aucune réponse n'est envoyée sans votre accord.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ===================== CTA BAND ===================== -->
+  <section class="cta" id="demo">
+    <div class="container cta__inner">
+      <div class="cta__mark" aria-hidden="true">
+        <svg viewBox="0 0 40 40" width="40" height="40"><text x="20" y="29" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="26" font-weight="800" fill="#ffffff">M</text></svg>
+      </div>
+      <div class="cta__copy">
+        <h2>Prêt à transformer vos échanges clients ?</h2>
+        <p>Découvrez comment Acolyte peut alléger la charge mentale de vos équipes
+           et améliorer l'expérience de vos clients.</p>
+      </div>
+      <a class="btn btn--primary btn--lg" href="#demo">Réserver une démo <span class="btn__arrow">→</span></a>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER STRIP ===================== -->
+  <footer class="foot">
+    <div class="container foot__row">
+      <span>⚡ Implantation rapide</span>
+      <span>🛡 Sécurisé et conforme (Québec)</span>
+      <span>🍁 Données hébergées au Canada</span>
+      <span>👥 Équipe locale à votre écoute</span>
+    </div>
+    <div class="container foot__legal">
+      <span>© 2026 Maestova · Acolyte est un produit de Maestova</span>
+      <span>Fait au Québec 🇨🇦</span>
+    </div>
+  </footer>
+
+</body>
+</html>
