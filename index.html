@@ -17,15 +17,14 @@
     <div class="container nav__inner">
       <a class="brand" href="#">
         <span class="brand__mark" aria-hidden="true">
-          <svg viewBox="0 0 36 36" width="30" height="30">
+          <svg viewBox="0 0 32 32" width="30" height="30">
             <defs>
               <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
                 <stop offset="0" stop-color="#7c5cff"/>
                 <stop offset="1" stop-color="#5b3ff5"/>
               </linearGradient>
             </defs>
-            <rect x="1" y="1" width="34" height="34" rx="10" fill="url(#logoGrad)"/>
-            <text x="18" y="25" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="21" font-weight="800" fill="#fff">M</text>
+            <path d="M3 28V4h6l7 10 7-10h6v24h-6V14l-7 10-7-10v14z" fill="url(#logoGrad)"/>
           </svg>
         </span>
         <span class="brand__name">Maestova</span>
@@ -96,65 +95,128 @@
         <div class="cube-stage">
           <svg class="cube-svg" viewBox="0 0 520 520" xmlns="http://www.w3.org/2000/svg">
             <defs>
-              <radialGradient id="blob" cx="45%" cy="40%" r="65%">
-                <stop offset="0%"  stop-color="#ffffff"/>
-                <stop offset="22%" stop-color="#c4b5fd"/>
-                <stop offset="50%" stop-color="#8b5cf6"/>
-                <stop offset="78%" stop-color="#6366f1"/>
-                <stop offset="100%" stop-color="#ec4899"/>
+              <radialGradient id="gViolet" cx="46%" cy="40%" r="62%">
+                <stop offset="0%" stop-color="#ffffff"/>
+                <stop offset="14%" stop-color="#f3e8ff"/>
+                <stop offset="40%" stop-color="#c4b5fd"/>
+                <stop offset="70%" stop-color="#8b5cf6"/>
+                <stop offset="100%" stop-color="#6b4fe0"/>
               </radialGradient>
-              <linearGradient id="faceTop" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#ffffff" stop-opacity=".85"/>
-                <stop offset="1" stop-color="#e9e6ff" stop-opacity=".35"/>
+              <radialGradient id="gPink" cx="50%" cy="50%" r="55%">
+                <stop offset="0%" stop-color="#fce7f3"/>
+                <stop offset="50%" stop-color="#ec76d4" stop-opacity=".85"/>
+                <stop offset="100%" stop-color="#d946ef" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="gBlue" cx="50%" cy="50%" r="55%">
+                <stop offset="0%" stop-color="#cfe9ff"/>
+                <stop offset="50%" stop-color="#5b8def" stop-opacity=".8"/>
+                <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+              </radialGradient>
+              <radialGradient id="gSphere" cx="36%" cy="30%" r="75%">
+                <stop offset="0%" stop-color="#ffffff"/>
+                <stop offset="45%" stop-color="#e9d5ff"/>
+                <stop offset="100%" stop-color="#a78bfa" stop-opacity=".55"/>
+              </radialGradient>
+              <linearGradient id="fTop" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ffffff" stop-opacity=".68"/>
+                <stop offset="1" stop-color="#e6e1ff" stop-opacity=".20"/>
               </linearGradient>
-              <linearGradient id="faceLeft" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#dcd7ff" stop-opacity=".30"/>
-                <stop offset="1" stop-color="#b9b0f5" stop-opacity=".18"/>
+              <linearGradient id="fLeft" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#d9d2ff" stop-opacity=".20"/>
+                <stop offset="1" stop-color="#b3a9f2" stop-opacity=".08"/>
               </linearGradient>
-              <linearGradient id="faceRight" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#ffffff" stop-opacity=".42"/>
-                <stop offset="1" stop-color="#cfc8fb" stop-opacity=".20"/>
+              <linearGradient id="fRight" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#ffffff" stop-opacity=".32"/>
+                <stop offset="1" stop-color="#cabffb" stop-opacity=".10"/>
               </linearGradient>
-              <filter id="goo" x="-40%" y="-40%" width="180%" height="180%">
-                <feTurbulence type="fractalNoise" baseFrequency="0.012 0.018" numOctaves="2" seed="7" result="noise"/>
-                <feDisplacementMap in="SourceGraphic" in2="noise" scale="34"/>
-                <feGaussianBlur stdDeviation="1.2"/>
+              <filter id="ruffle" x="-55%" y="-55%" width="210%" height="210%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.009 0.015" numOctaves="3" seed="11" result="n"/>
+                <feDisplacementMap in="SourceGraphic" in2="n" scale="44" xChannelSelector="R" yChannelSelector="G"/>
+                <feGaussianBlur stdDeviation="0.7"/>
               </filter>
-              <filter id="soft" x="-30%" y="-30%" width="160%" height="160%">
-                <feGaussianBlur stdDeviation="6"/>
+              <filter id="soft" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="8"/></filter>
+              <filter id="glow" x="-80%" y="-80%" width="260%" height="260%"><feGaussianBlur stdDeviation="5"/></filter>
+              <filter id="speckle" x="-10%" y="-10%" width="120%" height="120%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.34" numOctaves="2" seed="4" result="s"/>
+                <feColorMatrix in="s" type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 -7 3.4"/>
               </filter>
+              <clipPath id="blobClip"><circle cx="260" cy="248" r="98"/></clipPath>
             </defs>
 
-            <!-- ground glow -->
-            <ellipse cx="262" cy="438" rx="150" ry="26" fill="#b9aaf5" opacity=".35" filter="url(#soft)"/>
+            <!-- soft ground shadow -->
+            <ellipse cx="262" cy="448" rx="138" ry="20" fill="#9b88ee" opacity=".28" filter="url(#soft)"/>
 
-            <!-- inner organic blob -->
-            <g filter="url(#goo)">
-              <circle cx="250" cy="232" r="92" fill="url(#blob)"/>
-              <circle cx="300" cy="270" r="58" fill="url(#blob)" opacity=".9"/>
-              <circle cx="210" cy="282" r="50" fill="url(#blob)" opacity=".85"/>
-              <circle cx="288" cy="188" r="44" fill="url(#blob)" opacity=".8"/>
-            </g>
-            <circle cx="232" cy="208" r="9" fill="#ffffff" opacity=".9"/>
-
-            <!-- glass cube (isometric) -->
-            <g class="cube" stroke="#ffffff" stroke-opacity=".9" stroke-width="1.4" stroke-linejoin="round">
-              <!-- back faces hint -->
-              <polygon points="262,70 432,168 432,360 262,458 92,360 92,168" fill="#ffffff" fill-opacity=".05"/>
-              <!-- top -->
-              <polygon points="262,70 432,168 262,266 92,168" fill="url(#faceTop)"/>
-              <!-- left -->
-              <polygon points="92,168 262,266 262,458 92,360" fill="url(#faceLeft)"/>
-              <!-- right -->
-              <polygon points="432,168 262,266 262,458 432,360" fill="url(#faceRight)"/>
+            <!-- particles behind -->
+            <g opacity=".7">
+              <rect x="86" y="300" width="16" height="16" rx="3" transform="rotate(20 94 308)" fill="#c4b5fd" fill-opacity=".35" stroke="#a78bfa" stroke-opacity=".5"/>
+              <rect x="424" y="306" width="12" height="12" rx="2" transform="rotate(-15 430 312)" fill="#bfdbfe" fill-opacity=".3" stroke="#93c5fd" stroke-opacity=".5"/>
+              <circle cx="120" cy="150" r="3" fill="#a78bfa"/>
+              <circle cx="408" cy="120" r="2.5" fill="#f0abfc"/>
             </g>
 
-            <!-- floating particles -->
-            <circle cx="120" cy="120" r="3" fill="#a78bfa"/>
-            <circle cx="430" cy="110" r="2.5" fill="#f0abfc"/>
-            <circle cx="470" cy="300" r="3" fill="#818cf8"/>
-            <circle cx="80"  cy="320" r="2.5" fill="#c4b5fd"/>
-            <circle cx="360" cy="440" r="2.5" fill="#a78bfa"/>
+            <!-- faint back cube edges (glass depth) -->
+            <g fill="none" stroke="#b3a9f2" stroke-opacity=".22" stroke-width="1">
+              <polyline points="92,168 92,360 262,458"/>
+              <polyline points="432,168 432,360 262,458"/>
+              <line x1="262" y1="266" x2="262" y2="458"/>
+            </g>
+
+            <!-- inner ruffled organic mass -->
+            <g filter="url(#ruffle)">
+              <g fill="url(#gViolet)">
+                <ellipse cx="258" cy="246" rx="86" ry="80"/>
+                <ellipse cx="296" cy="232" rx="46" ry="44"/>
+                <ellipse cx="224" cy="278" rx="48" ry="44"/>
+                <ellipse cx="280" cy="296" rx="40" ry="38"/>
+                <ellipse cx="240" cy="206" rx="40" ry="36"/>
+              </g>
+              <g fill="url(#gPink)" opacity=".9">
+                <ellipse cx="300" cy="220" rx="60" ry="54"/>
+                <ellipse cx="318" cy="262" rx="40" ry="40"/>
+              </g>
+              <g fill="url(#gBlue)" opacity=".85">
+                <ellipse cx="214" cy="292" rx="58" ry="52"/>
+                <ellipse cx="246" cy="312" rx="40" ry="34"/>
+              </g>
+            </g>
+
+            <!-- fine mesh speckle on the blob surface -->
+            <g clip-path="url(#blobClip)">
+              <rect x="150" y="140" width="220" height="220" filter="url(#speckle)" opacity=".5"/>
+            </g>
+
+            <!-- specular highlights -->
+            <ellipse cx="232" cy="206" rx="26" ry="16" fill="#ffffff" opacity=".55" filter="url(#glow)"/>
+            <ellipse cx="300" cy="300" rx="14" ry="10" fill="#ffffff" opacity=".3" filter="url(#glow)"/>
+
+            <!-- little glass sphere -->
+            <circle cx="250" cy="300" r="15" fill="url(#gSphere)"/>
+            <circle cx="245" cy="294" r="3.5" fill="#ffffff" opacity=".9"/>
+
+            <!-- glass cube faces (over the blob) -->
+            <g stroke-linejoin="round">
+              <polygon points="262,70 432,168 262,266 92,168" fill="url(#fTop)" stroke="#ffffff" stroke-opacity=".55" stroke-width="1.2"/>
+              <polygon points="92,168 262,266 262,458 92,360" fill="url(#fLeft)" stroke="#ffffff" stroke-opacity=".4" stroke-width="1.2"/>
+              <polygon points="432,168 262,266 262,458 432,360" fill="url(#fRight)" stroke="#ffffff" stroke-opacity=".45" stroke-width="1.2"/>
+            </g>
+
+            <!-- bright near edges + top highlight streak -->
+            <g fill="none" stroke="#ffffff" stroke-linecap="round">
+              <polyline points="92,168 262,70 432,168" stroke-opacity=".95" stroke-width="2"/>
+              <line x1="262" y1="266" x2="262" y2="458" stroke-opacity=".55" stroke-width="1.6"/>
+              <line x1="92" y1="168" x2="92" y2="360" stroke-opacity=".5" stroke-width="1.4"/>
+              <line x1="432" y1="168" x2="432" y2="360" stroke-opacity=".5" stroke-width="1.4"/>
+              <line x1="150" y1="123" x2="240" y2="96" stroke-opacity=".7" stroke-width="3"/>
+            </g>
+
+            <!-- particles in front -->
+            <g>
+              <rect x="442" y="250" width="18" height="18" rx="3" transform="rotate(18 451 259)" fill="#ddd6fe" fill-opacity=".4" stroke="#a78bfa" stroke-opacity=".55"/>
+              <rect x="150" y="430" width="13" height="13" rx="2" transform="rotate(-12 156 436)" fill="#ede9fe" fill-opacity=".5" stroke="#c4b5fd" stroke-opacity=".6"/>
+              <circle cx="470" cy="360" r="3" fill="#818cf8"/>
+              <circle cx="360" cy="452" r="2.5" fill="#a78bfa"/>
+              <circle cx="96" cy="250" r="2.5" fill="#c4b5fd"/>
+            </g>
           </svg>
         </div>
       </div>
@@ -315,7 +377,7 @@
   <section class="cta" id="demo">
     <div class="container cta__inner">
       <div class="cta__mark" aria-hidden="true">
-        <svg viewBox="0 0 40 40" width="40" height="40"><text x="20" y="29" text-anchor="middle" font-family="Inter,system-ui,sans-serif" font-size="26" font-weight="800" fill="#ffffff">M</text></svg>
+        <svg viewBox="0 0 32 32" width="34" height="34"><path d="M3 28V4h6l7 10 7-10h6v24h-6V14l-7 10-7-10v14z" fill="#ffffff"/></svg>
       </div>
       <div class="cta__copy">
         <h2>Prêt à transformer vos échanges clients ?</h2>
